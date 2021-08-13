@@ -12,11 +12,11 @@
 			<div style="display: grid; grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) ); gap: 10px; justify-items: stretch; align-items: center;">
 				{% for name, url in errors %}
 				<a href="{{url}}">
-					<div class="card text-{{loop.cycle('white', 'white', 'white', 'white', 'black', 'black', 'black', 'white')}} bg-{{loop.cycle('primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark')}}">
-						<div class="card-body">
+					<span class="card text-{{loop.cycle('white', 'white', 'white', 'white', 'black', 'black', 'black', 'white')}} bg-{{loop.cycle('primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark')}}" style="display: block;">
+						<span class="card-body" style="display: block;">
 							<h5 class="card-title">{{name}}</h5>
-						</div>
-					</div>
+						</span>
+					</span>
 				</a>
 				{% endfor %}
 			</div>

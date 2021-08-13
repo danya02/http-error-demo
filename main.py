@@ -36,7 +36,7 @@ def index():
         errors = get_errors()
     except:
         err = traceback.format_exc()
-        return body_and_error("Error list misconfigured!", "<p>You can still test errors by appending <code>/(error_code)</code> to this address.</p><p>Error code:</p><p><code>" + err.replace('\n', '<br>') + "</code></p>")
+        return body_and_error("Error list misconfigured!", "<p>You can still test errors by appending <code>/(error_code)</code> to this address.</p><p>Error code:</p><p><code>" + err.replace('\n', '<br>') + "</code></p>"), 500
 
     return render_template('index.html', errors=errors)
 
