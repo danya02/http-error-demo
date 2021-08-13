@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang=en-us>
+	<head>
+		<title>HTTP Error test page</title>
+		    <meta charset="utf-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	</head>
+	<body>
+		<main class="container">
+			<h1>HTTP Error test page</h1>
+			<div style="display: grid; grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) ); gap: 10px; justify-items: stretch; align-items: center;">
+				{% for name, url in errors %}
+				<a href="{{url}}">
+					<div class="card text-{{loop.cycle('white', 'white', 'white', 'white', 'black', 'black', 'black', 'white')}} bg-{{loop.cycle('primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark')}}">
+						<div class="card-body">
+							<h5 class="card-title">{{name}}</h5>
+						</div>
+					</div>
+				</a>
+				{% endfor %}
+			</div>
+		</main>
+	</body>
+</html>

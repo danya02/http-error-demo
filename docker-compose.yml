@@ -4,7 +4,7 @@ services:
     build: .
     restart: unless-stopped
     volumes:
-      - ${PWD}/CONFIG.yml:/CONFIG.yml
+      - ${PWD}/ERRORS.yml:/ERRORS.yml
     expose: ["8000"]
     labels:  # see https://doc.traefik.io/traefik/routing/providers/docker/ for all labels
      - "traefik.enable=true"
